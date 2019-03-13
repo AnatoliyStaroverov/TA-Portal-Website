@@ -1,0 +1,225 @@
+<!-- This will be the main menu page. -->
+<!DOCTYPE html>
+
+<html>
+<head>
+    
+    <!-- Title of our project. -->
+    <title>Main page </title>                               
+    
+    <!-- Scales the dimensions of the page -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta charset="utf-8">
+    
+    <!--  bootstrap 4 links-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    
+    <!--link to main page css  -->
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/main.css') }}">
+    <!--
+    <script src="{{url_for('static', filename='scripts/portal.js')}}"></script> 
+    <script src="/scripts/portal.js"></script
+    <script type="text/javascript">
+            
+            $(function() {
+                    Portal.start();
+            });
+    </script>
+    -->
+</head>
+
+<!-----------------------------    Top nav bar on main page   ------------------------------------>
+    <!-- nav bar has the logo on the top left and a pop up sign up button the top left--------------->
+    
+    <nav class="navbar navbar-default navbar-expand-sm bg-dark navbar-dark fixed-top">
+        
+        <!-- logo on top left corner -->
+        <a class="navbar-brand" href="#">
+            Undergrad Assistance Portal 
+        </a>
+        
+        <!-- div class to move nav bar  "sign in" and " sign up " links to the right. -->
+        <div class="collapse navbar-collapse justify-content-end" id="nav-content">
+        <!-- have bar only has two links sign in and sign up -->
+            <ul class="navbar-nav">
+            
+                <!-- sign up -->
+                <li class="nav-item1">
+                    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal"> Sign up </button>
+                </li>
+            
+                <!-- sign in 
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Sign in</a>
+                </li>
+                -->
+ 
+            </ul>
+        </div>
+    </nav>
+<body> 
+<br>
+<br> 
+      
+    <!--------------------Set background color and main text on top left ----------------------------->
+  <div style="height:900px;background-color:E5E3E3">
+      
+      <div class="container">
+          
+        <div class="row">
+        <!--  just move down couples spaces -->
+           
+            <!--  first column-->
+            
+                <div class="col">
+               
+                <div align="center">
+                     <br><br>
+                <h1> Undergrad Assistance Portal</h1>
+                <h6> Connecting Instructors with qualified candidates</h6>
+      
+                <button type="button" class="btn btn-info" styles="width:200px">Learn More</button>
+        
+                </div>
+                  
+                <br> 
+           
+            
+         <!--  second column on top main page: this one deals with the login option-->
+            <div class ="col"> 
+                
+                
+                <br><br> 
+                 <!--  login form on side of main page-->
+                <div class="mx-auto" style="width:500px">
+
+
+                        {% block content %}
+                            <h1>Sign In</h1>
+                            <form action="" method="post" novalidate>
+                                {{ form.hidden_tag() }}
+                                <p>
+                                    {{ form.email.label }}<br>
+                                    {{ form.email(size=32) }}
+                                </p>
+                                <p>
+                                    {{ form.password.label }}<br>
+                                    {{ form.password(size=32) }}
+                                </p>
+                                
+                                <p>{{ form.submit() }}</p>
+                            </form>
+                        {% endblock %}
+                </div>
+            </div>
+            
+            <div class="w-100"></div>
+                
+          </div>
+        </div>
+    </div>
+    
+ </div>
+  <!----------------------------- The Modal AKA  the sign up pop up form-------------------- -->
+  <div class="modal fade" id="myModal">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        
+         <!-- Modal Header ----------------------------------------------------------------------->
+        <div class="modal-header">
+            <!-- header name-->
+            <h4 class="modal-title" style="width:100% ">Sign Up </h4>
+            
+            <!--  progress bar on the header of Model-->
+            <div class="progress" style="width:50%">
+                <div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:50% "> 1/2
+                </div>
+            </div>
+            
+            <!--  close button on top right corner -->
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body | this is where the form is going to be -->
+        <div class="modal-body">
+          
+            <form action="/api/Register" method="POST">
+                
+                <p><b>Select the Account Type</b></p>
+                <!--  two radio button on top to see if you are an instructor or a student -->
+                <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" class="custom-control-input" id="customRadio" name="options" value="INSTRUCTOR">
+                    <label class="custom-control-label" for="customRadio">Instructor</label>
+                </div>
+                
+            
+                <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" class="custom-control-input" id="customRadio2" name="options" value="STUDENT">
+                    <label class="custom-control-label" for="customRadio2">Student</label>
+                </div> 
+                <br><br>
+                
+
+                <p><b>Enter Personal Information</b></p>
+                
+                 <!--  get first name -->
+                <div class="form-group">
+                    <label for="first-name">First Name:</label>
+                    <input type="text" class="form-control" name="first-name">
+                </div>
+                
+                <!--  get last name  -->
+                <div class="form-group">
+                    <label for="last-name">Last Name:</label>
+                    <input type="text" class="form-control" name="last-name">
+                </div>
+                <!--  get email fromm user -->
+                <div class="form-group">
+                    <label for="email">Email address:</label>
+                    <input type="email" class="form-control" name="email">
+                </div>
+                
+                <!--  get password from user  -->
+                <div class="form-group">
+                    <label for="pwd">Password:</label>
+                    <input type="password" class="form-control" name="pwd">
+                </div>
+                <!--
+                <div class="form-group">
+                        
+                        <label for="ID">ID: </label>
+                        <input type="email" class="form-control" id="studentid" placeholder=" Enter Student id number">
+                </div>
+                -->
+                
+              
+            <form>
+            
+            
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+                <input class="btn btn-primary" type="submit" value="Register"  />
+          <!--<button type="submit" class="btn btn-info" data-dismiss="modal">Next</button> -->
+        </div>
+        
+      </div>
+      </div>
+</div>
+    
+    
+</body>
+
+
+<!-- Footer -->
+<footer class="page-footer font-small bg-dark">
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3 text-white">© 2018 Copyright:
+            <a href="#"> UAP.com</a>
+        </div>
+</html>

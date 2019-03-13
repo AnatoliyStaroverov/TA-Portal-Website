@@ -1,0 +1,44 @@
+    
+ ----------------------------------------------------------------------------------------------
+                            Specs Of the Undergrad Portal Project
+
+This document will show all the functionality that each  web page will do. This is subjected to 
+change if needed.
+-----------------------------------------------------------------------------------------------
+
+
+-----------------------------------------------------------------------------------------------
+ 1. HomePage: mainpage.html
+-----------------------------------------------------------------------------------------------
+
+    - create  a student or Instructor account.
+    - verify that the username isnt taken
+    - verify that the password meets the website standard
+    - Login to account
+    - Provide new User with Info data on the page.
+
+-----------------------------------------------------------------------------------------------
+2. (Student or Instructor) Form page: GerStudentInfo.html
+-----------------------------------------------------------------------------------------------
+
+    - Gather personal info from User
+    - User upload photo and other documents such as transcripts
+    - verifiy that upload document is a accepted type.
+    
+-----------------------------------------------------------------------------------------------
+3. Student Main Page: studentPortal.html
+-----------------------------------------------------------------------------------------------   
+    -  message board that allows communication with instructor
+    -  option to give updates on task.
+    -  option to apply for a job
+    -  option to view the status of job application
+
+-----------------------------------------------------------------------------------------------
+4. Instructor Main Page: InstructorPortal.html
+-----------------------------------------------------------------------------------------------   
+    - Message board that allows communication with Student
+    - option to give tasks to Student
+    - option to post a job
+    - option to give Studnet grade based on task specifications.
+
+  

@@ -1,0 +1,30 @@
+ 
+                                Report Bugs Here
+
+|---------------------------------------------------------------------------------------------------|
+|  Date:                                         Issue:                              Web-Page:      |
+|---------------------------------------------------------------------------------------------------|
+
+1.   DATE: 10/27/2018  (Anatoiy)
+     ISSUE: form isnt position correctly 
+     WEB-PAGE: student form page 
+     
+2.  11/02/2018 (Anatoliy)
+    ISSUE:  temlate_render doesnt work correcly with profile page
+    WEB-PAGE: student profile page
+
+3.
+
+4.
+
+5.
+
+6.
+
+7.
+
+8.
+
+9.
+
+10.

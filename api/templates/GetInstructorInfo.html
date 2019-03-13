@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+
+<html>
+    
+<head>
+    
+    <!-- Title of our project. -->
+    <title>Undergrad Assistance Portal</title>                               
+    
+    
+    
+    <!-- Scales the dimensions of the page -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta charset="utf-8">
+    
+    <!--  bootstrap 4 links-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    
+    <!--link to main page css  -->
+    <link rel="stylesheet" type="text/css" href="main.css" />
+
+    <!--link to portal.js  -->
+    <script src="../scripts/portal.js"></script>
+    <script type="text/javascript">
+            // This is a jQuery convention to say that once all the files
+            // load, the function Portal.start() should run.
+            // This function is defined in the portal.js
+            $(function() {
+                    Portal.start();
+            });
+    </script>
+
+</head>
+    
+    
+<body>
+    
+   <!--Nave bar on top-->
+    <nav class="navbar navbar-default navbar-expand-sm bg-dark navbar-dark fixed-top">
+        
+        <!-- logo on top left corner -->
+        <a class="navbar-brand" href="#">
+            Undergrad Assistance Portal 
+        </a>
+        
+        <!-- div class to move nav bar  "sign in" and " sign up " links to the right. -->
+        <div class="collapse navbar-collapse justify-content-end" id="nav-content">
+        <!-- have bar only has two links sign in and sign up -->
+            <ul class="navbar-nav">
+            
+                <!-- sign up -->
+                <li class="nav-item1">
+                    
+                </li>
+            
+                <!-- sign in 
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Sign in</a>
+                </li>
+                -->
+ 
+            </ul>
+        </div>
+    </nav><br>
+    <!----END OF  Top nav bar on main page-->
+  
+    <div style="height:900px;background-color:#ddd">
+        <br><br><br><br><br><br><br>
+
+         <div class=" row h-75 justify-content-center align-items-center">
+
+            <!-- Create the Instructor form part 2-->
+            <form action="/action_page.php" class="w-50 p-3" style="border:1px solid black; background-color:#FDFEFE   ">
+
+                <!--  progress bar on the header of Model-->
+                    <div class="progress" style="width:100%">
+                        <div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100" style="width:100% "> 2 / 2
+                        </div>
+                    </div> <br>
+                <!--  Enter professional info-->
+                <h4> Professional Info</h4>
+                <hr>
+
+                <!-- Enter Facalty ID-->
+                <div class="form-group">
+
+                    <label for="Major">Enter Facalty ID:</label>
+                    <input type="Major" class="form-control" id="number">  
+                
+                </div> 
+
+                    
+                <!-- Phone number and office location -->
+                <!-- Create one row with two columns  -->
+                <div class="form-group " styles="width:60%">
+                    
+                    <!-- row for number and Office -->
+                    <div class="row">
+
+                        <!-- COl for the instructor  Phone number-->
+                        <div class="col">  
+
+                            <label for="Major">Enter Phone Number</label>
+                            <input type="Major" class="form-control" id="number">      
+
+                        </div>
+                    
+                        <!-- COl for the Office info-->
+                        <div class="col"> 
+
+                            <label for="GPA">Enter Office Location</label>
+                            <input type="GPA" class="form-control" id="office">
+                            
+                        </div>
+
+                    </div>
+                
+                </div>
+                <br>
+
+                <!--
+                    THis gives the instructor 3 options to 
+                    upload or imput their course load
+                -->
+                <h4> Choose one of the three options:</h4>
+                <hr>
+
+                <!-- option for instructor to pharse a web page-->
+                <div class="form-group">
+
+                    <label for="Major">Enter Website URL of  University Course description Page </label>
+                    <input type="Major" class="form-control" id="web">  
+                
+                </div>
+
+                <!-- Option for instructor to upload sheets-->
+                <div class="form-group">
+
+                    <label for="exampleFormControlFile1">Upload  All Course teaching</label>
+                    <input type="file" class="form-control-file" id="courses">
+
+                </div>
+                <br>
+
+                <!-- part of the form that Instructor enters  profile info -->
+                <h4> Profile Info</h4>
+                <hr>
+
+                <!-- Option for Instructor to enter 3 line bio -->
+                <div class="form-group">
+
+                    <label for="exampleFormControlTextarea1"> Enter Bio</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+
+                </div>
+                
+                <!-- Option to upload photo for profile page-->
+                <div class="form-group">
+
+                    <label for="exampleFormControlFile1">Upload Profile Picture</label>
+                    <input type="file" class="form-control-file" id="exampleFormControlFile1">
+
+                </div>
+                <br>
+            
+                <!-- Submit -->
+                <button type="submit" class="btn btn-info">Create Account</button>
+            </form>
+   
+    
+        </div>
+        
+    </div>
+        
+        
+    
+</body>   
+</html>
