@@ -1,4 +1,4 @@
-<!-- This will be the main menu page. -->
+﻿<!-- This will be the main menu page. -->
 <!DOCTYPE html>
 
 <html>
@@ -80,8 +80,9 @@
                      <br><br>
                 <h1> Undergrad Assistance Portal</h1>
                 <h6> Connecting Instructors with qualified candidates</h6>
-      
+                <!--
                 <button type="button" class="btn btn-info" styles="width:200px">Learn More</button>
+                -->
         
                 </div>
                   
@@ -103,14 +104,14 @@
                                 {{ form.hidden_tag() }}
                                 <p>
                                     {{ form.email.label }}<br>
-                                    {{ form.email(size=32) }}
+                                    {{ form.email(size=32, align="center",class="form-control form-control-lg" ) }}
                                 </p>
                                 <p>
                                     {{ form.password.label }}<br>
-                                    {{ form.password(size=32) }}
+                                    {{ form.password(size=32, align="center",class="form-control form-control-lg" ) }}
                                 </p>
                                 
-                                <p>{{ form.submit() }}</p>
+                                <p>{{ form.submit(class="btn btn-info") }}</p>
                             </form>
                         {% endblock %}
                 </div>
