@@ -1,0 +1,28 @@
+ 
+
+
+ 1. Finish restructing the application API
+ 2. Add restfull extention for the flask application that will allow to test the endpoint.
+ 3. add communication between the student and the instructor through flask sockit-io
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
